@@ -1,29 +1,26 @@
-# Created by .ignore support plugin (hsz.mobi)
+# General system files
 Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
 *.stackdump
 [Dd]esktop.ini
 $RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
 *.lnk
+
+# Python specific
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Build and distribution
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -32,10 +29,24 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-*.manifest
 *.spec
+
+# Virtual environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Package management
 pip-log.txt
 pip-delete-this-directory.txt
+.pypirc
+
+# Testing and coverage
 htmlcov/
 .tox/
 .coverage
@@ -46,51 +57,34 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+
+# Logs and temporary files
+*.log
 *.mo
 *.pot
-*.log
 local_settings.py
 db.sqlite3
+celerybeat-schedule
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Sphinx documentation
+docs/_build/
+
+# Scrapy
+.scrapy
+
+# Django
 instance/
 .webassets-cache
-.scrapy
-docs/_build/
-target/
-.ipynb_checkpoints
-.python-version
-celerybeat-schedule
-*.sage.py
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+
+# Spyder and Rope
 .spyderproject
 .spyproject
 .ropeproject
-/site
-.mypy_cache/
-.idea/
-cmake-build-debug/
-cmake-build-release/
-.idea/**/mongoSettings.xml
-*.iws
-out/
-.idea_modules/
-atlassian-ide-plugin.xml
-.idea/replstate.xml
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
-.idea/httpRequests
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
+
+# macOS specific
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -108,6 +102,31 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# IDE specific
+.idea/
+.idea_modules/
+.idea/**/mongoSettings.xml
+*.iws
+.idea/replstate.xml
+.idea/httpRequests
+cmake-build-debug/
+cmake-build-release/
+atlassian-ide-plugin.xml
+
+# Temporary or backup files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Crashlytics and Fabric
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Generated test results and output
 /tests/result_images/
 /outputdir/
-.pypirc

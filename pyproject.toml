@@ -1,17 +1,22 @@
-[build-system]
-requires = ["setuptools==75.1.0", "wheel==0.44.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-authors = [
-    { name = "Idan Morad", email = "idanmorad.arthas@gmail.com" },
-]
+[tool.poetry]
 name = "data_science_utils"
-dynamic = ["version", "dependencies"]
+version = "0.1.0" # Poetry requiere una versión explícita; ajusta según corresponda
 description = "This project is an ensemble of methods which are frequently used in python Data Science projects."
-license = { text = "MIT" }
-requires-python = ">=3.9"
+authors = ["Idan Morad <idanmorad.arthas@gmail.com>"]
+license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/idanmoradarthas/DataScienceUtils"
+repository = "https://github.com/idanmoradarthas/DataScienceUtils.git"
+documentation = "https://datascienceutils.readthedocs.io/en/latest/"
+keywords = [
+    "data-science",
+    "utilities",
+    "python",
+    "machine-learning",
+    "scikit-learn",
+    "matplotlib",
+    "plotly"
+]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Framework :: tox",
@@ -23,20 +28,46 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
 ]
-keywords = ["data-science", "utilities", "python", "machine-learning", "scikit-learn", "matplotlib", "plotly"]
 
-[project.urls]
-Homepage = "https://github.com/idanmoradarthas/DataScienceUtils"
-Documentation = "https://datascienceutils.readthedocs.io/en/latest/"
-Issues = "https://github.com/idanmoradarthas/DataScienceUtils/issues"
-Repository = "https://github.com/idanmoradarthas/DataScienceUtils.git"
-Changelog = "https://github.com/idanmoradarthas/DataScienceUtils/blob/master/CHANGELOG.md"
 
-[tool.setuptools]
-packages = ["ds_utils"]
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = ">=1.26.3"
+scipy = ">=1.11.4"
+pandas = ">=2.1.4"
+matplotlib = ">=3.8.4"
+seaborn = ">=0.12.2"
+scikit-learn = ">=1.2.2"
+pydotplus = ">=2.0.2"
+joblib = ">=1.2.0"
+plotly = ">=5.24.1"
+black = "^24.10.0"
 
-[tool.setuptools.dynamic]
-version = { attr = "ds_utils.__version__" }
-dependencies = { file = ["requirements.txt"] }
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.4.4"
+pytest-mock = ">=3.10.0"
+pytest-cov = ">=4.1.0"
+pytest-xdist = ">=3.5.0"
+pytest-mpl = ">=0.17.0"
+kaleido = ">=0.4.1"
+build = ">=1.2.2"
+twine = ">=5.1.1"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=7.3.7"
+sphinx_rtd_theme = ">=2.0.0"
+
+
+[tool.poetry.urls]
+homepage = "https://github.com/idanmoradarthas/DataScienceUtils"
+repository = "https://github.com/idanmoradarthas/DataScienceUtils.git"
+documentation = "https://datascienceutils.readthedocs.io/en/latest/"
+issues = "https://github.com/idanmoradarthas/DataScienceUtils/issues"
+changelog = "https://github.com/idanmoradarthas/DataScienceUtils/blob/master/CHANGELOG.md"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
